@@ -25,7 +25,12 @@
     }
 
     getDetails() {
-        return `${this.name}, ${this.age}, ${this.gender}, ${this.email} `
+        return {
+        name: this.name,
+        age: this.age,
+        gender: this.gender,
+        email: this.email,
+    }
     }
   }
 
@@ -37,6 +42,9 @@ class Employee extends Person {
    }
 
    getEmployeeDetails() {
-    return `The salary is ${this.salary} and the worker is from ${this.department}`
+    return {
+        salary: this.salary,
+        department: this.department,
+    }
    }
 }
