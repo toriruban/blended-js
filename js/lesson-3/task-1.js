@@ -3,3 +3,7 @@
 // Очікуваний результат: [1, 4, 9, 16, 25].
 
 const numbers = [1, 2, 3, 4, 5];
+const doubleNumbers = numbers.flatMap(num => [num ** 2]);
+console.log(doubleNumbers)
+
+
