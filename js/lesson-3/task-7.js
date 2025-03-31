@@ -1,8 +1,25 @@
-// Відсортуйте масив рядків ["banana", "orange", "apple", "pear"]
-//  у порядку алфавіту. 
-// Очікуваний результат: ["apple", "banana", "orange", "pear"].
+// Напишіть скрипт, який для об'єкту user, послідовно:
+// 1 - додасть поле mood зі значенням 'happy',
+// 2 - замінить hobby на 'skydiving',
+// 3 - замінить значення premium на false,
+// 4 - виведе зміст об'єкта user у форматі
+// '<ключ>:<значення>' використовуя Object.keys() та for...of
 
-const stringArray = ['banana', 'orange', 'apple', 'pear'];
+const user = {
+    name: "John",
+    age: 20,
+    hobby: "tenis",
+    premium: true,
+  };
 
-const sortedArray = stringArray.toSorted((a, b) => a[0].localeCompare(b[0]));
-console.log(sortedArray)
+  user.mood = 'happy';
+  user.hobby = 'skydiving';
+  user.premium = false;
+
+  console.log(user)
+
+  const keys = Object.keys(user);
+
+  for (const key of keys) {
+    console.log(`${key}: ${user[key]}`)
+  }

@@ -1,11 +1,21 @@
-//  Відсортуйте масив об'єктів за віком у порядку зростання. 
-// Очікуваний результат: [{name: "Bob", age: 19}, {name: "John", age: 27}, {name: "Jane", age: 31}].
+// Є об'єкт, в якому зберігаються зарплати команди
+// Напишіть код для додавання усіх зарплат та
+// збережіть його результат в змінній sum.
+// Якщо об'єкт salaries пустий, то результат має бути 0
 
-const users = [
- { name: 'John', age: 27 },
- { name: 'Jane', age: 31 },
- { name: 'Bob', age: 19 },
-];
+const salaries = {
+    Mango: 100,
+    Poly: 160,
+    Ajax: 1470,
+  };
 
-const sortedArray = users.toSorted((a, b) => a.age - b.age)
-console.log(sortedArray)
+const values = Object.values(salaries);
+let sum = 0;
+
+for (const value of values){
+  sum += value;
+}
+console.log(sum)
+
+// console.log(sum) поза циклом, виводиться фінальне значення суми, тобто 1730.
+// виклик console.log(sum) всередині циклу показує проміжні результати, а поза циклом — остаточну суму.
